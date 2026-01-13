@@ -17,8 +17,8 @@
     "start:backend": "pnpm --filter ./apps/backend run start",
     "start:frontend": "pnpm --filter ./apps/frontend run start",
     "start:orchestrator": "pnpm --filter ./apps/orchestrator run start",
-    "prisma-generate": "pnpm dlx prisma generate --schema ./schema.prisma",
-    "prisma-db-push": "pnpm dlx prisma db push --schema ./schema.prisma",
+    "prisma-generate": "pnpm dlx prisma@6 generate --schema ./schema.prisma",
+    "prisma-db-push": "pnpm dlx prisma@6 db push --schema ./schema.prisma",
     "pm2": "pnpm run pm2-run",
     "pm2-run": "pm2 delete all || true && pnpm run prisma-db-push && pnpm run --parallel pm2 && pm2 logs",
     "postinstall": "pnpm run prisma-generate"
